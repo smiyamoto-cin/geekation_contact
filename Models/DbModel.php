@@ -44,9 +44,6 @@ class DbModel{
         $pass = DB_PASSWD;
 
         $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8";
-        $user = 'contact_user';
-        $pass = 's-miyamoto2012';
-
 
         try {
             $dbh = new \PDO($dsn, $user, $pass, [

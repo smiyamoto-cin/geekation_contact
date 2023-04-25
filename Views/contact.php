@@ -23,9 +23,9 @@ $instance->contact();
 	<div class="container">
 		<form method="post" action="contact.php">
 			<div class="row justify-content-center">
-			<div class="col-md-12 mt-3 mb-1">
-			<h1 class ="text-center">入力画面</h1>
-			</div>
+				<div class="col-md-12 mt-3 mb-1">
+					<h1 class="text-center">入力画面</h1>
+				</div>
 				<div class="col-md-8 mt-3 mb-1">
 					<label for="fullname">氏名</label>
 					<input type="text" name='fullname' class="form-control" id="full" placeholder="氏名"

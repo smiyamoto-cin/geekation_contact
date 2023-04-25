@@ -55,26 +55,26 @@ if (isset($_SESSION['message'])) {
 				<div class="col-md-8 mt-3 mb-1">
 					<label for="fullname">氏名</label>
 					<input type="text" name='fullname' class="form-control" id="full" placeholder="氏名"
-						value="<?php  echo $fullname ?>" required>
+						value="<?php  echo $fullname ?>" readonly>
 				</div>
 				<div class="col-md-8 m-1">
 					<label for="furigana">フリガナ</label>
 					<input type="text" name='furigana' class="form-control" id="furigana" placeholder="フリガナ"
-						value="<?php  echo $furigana ?>" required>
+						value="<?php  echo $furigana ?>" readonly>
 				</div>
 				<div class="col-md-8 m-1">
 					<label for="tel">電話番号</label>
 					<input type="text" name='tel' class="form-control" id="tel" placeholder="電話番号"
-						value="<?php  echo $tel?>" pattern="[0-9]*">
+						value="<?php  echo $tel?>" pattern="[0-9]*" readonly>
 				</div>
 				<div class="col-md-8 m-1">
 					<label for="email">メールアドレス</label>
 					<input type="text" name='email' class="form-control" id="email" placeholder="メールアドレス"
-						value="<?php  echo $email ?>" required>
+						value="<?php  echo $email ?>" readonly>
 				</div>
 				<div class="col-md-8 mt-1">
 					<label for="message">お問い合わせ内容</label>
-					<pre><textarea name='message' class="form-control" id="message" placeholder="お問い合わせ内容" required><?php  echo $message ?></textarea></pre>
+					<pre><textarea name='message' class="form-control" id="message" placeholder="お問い合わせ内容" readonly><?php  echo $message ?></textarea></pre>
 					
 				</div>
 			</div>

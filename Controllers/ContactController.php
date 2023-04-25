@@ -32,7 +32,7 @@ class ContactController
         return $params;
     }
 
-        //入力画面
+    //入力画面
     public function contact()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -59,7 +59,7 @@ class ContactController
     //編集画面
     public function edit()
     {
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $_SESSION['id'] = htmlspecialchars($_POST['id'], ENT_QUOTES, 'UTF-8');
             $_SESSION['fullname'] = htmlspecialchars($_POST['fullname'], ENT_QUOTES, 'UTF-8');
@@ -67,28 +67,28 @@ class ContactController
             $_SESSION['tel'] = htmlspecialchars($_POST['tel'], ENT_QUOTES, 'UTF-8');
             $_SESSION['email'] = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
             $_SESSION['message'] = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
-        
-            $errors =$this ->validate($_POST);
-          
-              if (!empty($errors)) {
+
+            $errors = $this->validate($_POST);
+
+            if (!empty($errors)) {
                 //エラーがある場合の対処
                 foreach ($errors as $error) {
-                echo '<p>' . htmlspecialchars($error, ENT_QUOTES, 'UTF-8') . '</p>';
+                    echo '<p>' . htmlspecialchars($error, ENT_QUOTES, 'UTF-8') . '</p>';
                 }
-                } else { 
+            } else {
                 //エラーがなかった時→、入力画面contact.phpへ
                 //DBを更新
                 $dbh = (new DbModel())->dbConnect();
                 $update = new ContactController();
-                $result =$update ->update($_SESSION, $dbh);
+                $result = $update->update($_SESSION, $dbh);
                 session_destroy();
-                if ($result === true){
+                if ($result === true) {
                     header('Location: /contact.php');
                     exit;
                 }
-                }
             }
         }
+    }
     //確認画面
     public function confirm()
     {
