@@ -13,7 +13,7 @@ ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
 	border-collapse: collapse;
 }
 
-textarea { font-size: 100%; vertical-align:middle;}
+textarea { font-size: 100%; vertical-align:middle;white-space: pre-wrap;}
 img { border-style: none; display: block; }
 hr { display: none; }
 em{font-style: normal}

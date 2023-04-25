@@ -119,7 +119,10 @@
 
 
 
-	/* ----contact.php------- */
+	/* ----contact_form.php------- */
+	.contact_form{
+		display:block
+	}
 
 
 	/* アコーディオンメニュー全体のサイズ・位置 */
